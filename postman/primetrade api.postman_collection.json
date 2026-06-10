@@ -1,0 +1,171 @@
+{
+  "info": {
+    "_postman_id": "7a1a5a13-1cb7-472f-bac9-b1714b686c78",
+    "name": "primetrade api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53952145",
+    "_collection_link": "https://go.postman.co/collection/53952145-7a1a5a13-1cb7-472f-bac9-b1714b686c78?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{server}}/auth/register",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"hasu67@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/auth/login",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "tasks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjdiMmU2NzhmZjg3MWZjMWNjZjIwOCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwOTk4OTQyLCJleHAiOjE3ODE2MDM3NDJ9.HGEzR8mkWrOU03sTsZ6pW_tkAK2IRVrjuLEcbw60fvQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Learn JWT\",\r\n    \"description\":\"Finish backend assignment\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/tasks",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "tasks",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "tasks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjdiMmU2NzhmZjg3MWZjMWNjZjIwOCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwOTk4OTQyLCJleHAiOjE3ODE2MDM3NDJ9.HGEzR8mkWrOU03sTsZ6pW_tkAK2IRVrjuLEcbw60fvQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/tasks/6a27e461f7da0bd512daee2e",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "6a27e461f7da0bd512daee2e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "tasks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjdiMmU2NzhmZjg3MWZjMWNjZjIwOCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwOTk4OTQyLCJleHAiOjE3ODE2MDM3NDJ9.HGEzR8mkWrOU03sTsZ6pW_tkAK2IRVrjuLEcbw60fvQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/tasks/6a27e461f7da0bd512daee2e",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "6a27e461f7da0bd512daee2e"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
